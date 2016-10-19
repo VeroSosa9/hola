@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+
+  devise_for :users
+  namespace :admin do
+    
+    resources :home, only: [:index]
+
+    resources :students
+    
+  end
+
+  root 'home#index'
+
+ 
+
   get 'bienvenida/index'
 
   get 'bienvenida/hola'
