@@ -1,0 +1,20 @@
+<% if notice.present? %>
+<%= notice %>
+<%end %>
+<table>
+	<thead>
+		<tr>
+		<th>Nombre </th>
+		<th>Fecha nacimiento</th>
+		<th>Telefono</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+		<td> <%= "#{@estudiante.nombre} #{@estudiante.apellido_paterno} #{@estudiante.apellido_materno}"%> </td>
+		<td> <%= @estudiante.fecha_nacimiento %> </td>
+		<td> <%= @estudiante.telefono %></td>
+		</tr>
+	</tbody>
+
+</table>

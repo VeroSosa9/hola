@@ -5,13 +5,13 @@ Rails.application.routes.draw do
     
     resources :home, only: [:index]
 
-    resources :students
+     resources :student
     
   end
 
   root 'home#index'
 
- 
+ s
 
   get 'bienvenida/index'
 

@@ -1,0 +1,21 @@
+<%= form_for(@estudiante) do |f| %>
+<%= f.label :nombre %>
+<%= f.text_field :nombre %>
+<br> 
+<%= f.label :apellido_paterno %>
+<%= f.text_field :apellido_paterno %>
+<br>
+<%= f.label :apellido_materno %>
+<%= f.text_field :apellido_materno %>
+<br>
+<%= f.label :fecha_nacimiento %>
+<%= f.text_field :fecha_nacimiento %>
+<br>
+<%= f.label :telefono %>
+<%= f.text_field :telefono %>
+<br>
+<br>
+
+<%= f.submit %>
+
+<% end %>

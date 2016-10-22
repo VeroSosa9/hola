@@ -1,0 +1,46 @@
+/*
+ *= require_tree .
+ *= require_self
+ */
+
+.banner-border {
+	border: 1px solid #000;
+	border-radius: 5px;
+	height: 150px;
+	background: #f2f2f2;
+}
+/*
+.menu {
+	height: 50px;
+	background: #000;
+}*/
+
+.picture {
+	height: 75px;
+	background: gray;
+	border-radius: 5px;
+}
+
+.picture2 {
+	height: 400px;
+	background: #2E9AFE;
+	border: 1px solid #000;
+	border-radius: 5px;
+
+}
+.footer {
+	background: #333333;
+	color: #f2f2f2;
+	height: 50px;
+
+}
+.picture3{
+ 	height: 40px;
+	background: #f2f2f2;
+	border: 1px solid #000;	
+}
+.picture4{
+ 	height: 100px;
+	background: #f2f2f2;
+	border: 1px solid #000;	
+}
