@@ -1,37 +1,87 @@
-<!--<%= link_to "[ Iniciar Sesión ]", new_user_session_path %>-->
-
-
-<% if user_signed_in? %>
-  <li><%= link_to "[ Cerrar Sesión ]", destroy_user_session_path, 
-method: :delete %></li>
-<% else %>
-  <li><%= link_to "[ Iniciar Sesión ]", new_user_session_path %></li>
-<% end %>
-
+<!--<%= link_to " Iniciar Sesión ", new_user_session_path %>-->
 
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" href="http://ubuntuone.com/7CcSCFAincrPmWZYOnMJA9" type="text/css" media="screen" />
+	<script type="text/javascript" src="http://ubuntuone.com/1CGmD4rRCsLBvL2ZzLFBgc"></script>
+
+	
+
+ <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/responsive.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
 
 <div class= "container">
 	<div class= "row" >
 		<div class="col-md-12">
+
 			<!-- Parte arriba -->
 			<div class ="row">
 				<div class="col-md-2">
-					<div class="picture"></div>
+					<!--<div class="picture"></div> -->
+					<!--<div class="btn btn-primary btn-lg"><a href="android/index"> Android </div></a> -->
+				   <div class="container">
+
+				  <div class="btn-group">
+ 					 <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  Android <span class="caret"></span>
+ 					 </button>
+ 					 <ul class="dropdown-menu">
+
+ 						 <li role="separator" class="divider"></li>
+   							<li><a href="android/index">¿Que es Android?</a></li>
+   							<li role="separator" class="divider"></li>
+    						<li><a href="android/history">Historia</a></li>
+   							 <li role="separator" class="divider"></li>
+  							  <li><a href="android/caract">Caracteristicas</a></li>
+ 							   <li role="separator" class="divider"></li>
+ 							   <li><a href="android/act">Actualidad</a></li>
+
+ 					 </ul> 
+					</div>
+					</div>
+   
+
+
 				</div>
 				<div class="col-md-2">
-					<div class="picture"></div>
+					<!-- <div class="picture"></div> -->
+					<!--<div class="btn btn-primary btn-lg">   iOS   </div>-->
+					<div class='container'>
+
+				   <div class="btn-group"> 
+ 					 <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  iOS <span class="caret"></span>
+ 					 </button>
+ 					 <ul class="dropdown-menu">
+ 						 <li role="separator" class="divider"></li>
+   							<li><a href="ios/index">¿Que es iOS?</a></li>
+   							<li role="separator" class="divider"></li>
+    						<li><a href="ios/history">Historia</a></li>
+   							 <li role="separator" class="divider"></li>
+  							  <li><a href="ios/caract">Caracteristicas</a></li>
+ 							   <li role="separator" class="divider"></li>
+ 							   <li><a href="ios/act">Actualidad</a></li>
+ 					 </ul>
+					</div>
+					</div>
+
 				</div>
 				<div class="col-md-2">
-					<div class="picture"></div>
+					<!--<div class="picture"></div> -->
+					<div class="btn btn-primary btn-lg"><a href="android/comparacion"> Novedades </a> </div>
+
 				</div>
 				<div class="col-md-2">
-					<div class="picture"></div>
+					<!--<div class="picture"></div> -->
+					<div class="btn btn-primary btn-lg"><a href="android/links">  Links  </div>
+
 				</div>
+
+
+
 				<!--<div class="col-md-2">
 					<div class="picture"></div>
 				</div> -->
@@ -45,32 +95,135 @@ method: :delete %></li>
 </div>
 
 			</div>
-			<br>
-			<br>
-			<br>
-					<!-- Parte enmedio -->
-			<div class ="row">
-				<div class="col-md-6">
-					<div class="picture2"></div>
-				</div>
-				<div class="col-md-6">
-					<div class="picture2"></div>		
-				</div>
 
-				</div>
-				<br>
-				<br>
-			</div>	
+<br>
+<% if user_signed_in? %>
+  <h4 class="text-right", ><%= link_to "Cerrar Sesión", destroy_user_session_path,
+method: :delete %></h4>
+
+<% else %>
+
+  <li><%= link_to "Iniciar Sesión", new_user_session_path %></li>
+<% end %>
+
 
 			<br>
 			<br>
+			<br>
+					
+
+
+			<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="imagenes/1.jpg" alt="...">
+      <div class="caption">
+      	 <h4>Actualmente Android tiene múltiples marcas que utilizan esta plataforma móvil</h4>
+       
+      </div>
+    </div>
+  </div>
+
+   <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="imagenes/2.jpg" alt="...">
+      <div class="caption">
+      	 <h4>Logotipo de Android</h4>
+       
+      </div>
+    </div>
+  </div>
+
+<div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="imagenes/4.jpg" alt="...">
+      <div class="caption">
+      	 <h4>La Play Store tiene un catalogo muy extenso en aplicaciones para tu Smarthphone</h4>
+       
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<br>
+<br>
+
+			<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="imagenes/6.jpg" alt="...">
+      <div class="caption">
+      	 <h4>iOS sólo utiliza su software en sus propios dispositivos, no es compatible con otros Smartphones</h4>
+       
+      </div>
+    </div>
+  </div>
+
+   <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="imagenes/7.jpg" alt="...">
+      <div class="caption">
+      	 <h4>Su mas reciente versión es la 10</h4>
+       
+      </div>
+    </div>
+  </div>
+
+<div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="imagenes/8.jpg" alt="...">
+      <div class="caption">
+      	 <h4>Su tienda de compra y descarga para aplicaciones es la App store</h4>
+       
+      </div>
+    </div>
+  </div>
+
+</div>
+
 
 			<!-- Parte de comentarios -->
-			<div class ="row">
+
+		 <%if current_user.present? %>
+
+
+		 
+
+		 	
+
+			<% end %>
+
+
+		 	<!-- <div class ="row">
 				<div class="col-md-6">
 					<div class="picture3"></div>
 				</div>
-				<button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+				<button type="submit" class="btn btn-primary ">Enviar</button>
+				
+				</div>
+				<br>
+
+			<div class ="row">
+				<div class="col-md-10">
+					<div class="picture4"></div>
+				</div>
+				</div>  -->
+			
+
+
+
+		
+
+
+
+
+
+		<!--	<div class ="row">
+				<div class="col-md-6">
+					<div class="picture3"></div>
+				</div>
+				<button type="submit" class="btn btn-primary ">Enviar</button>
 				
 				</div>
 				<br>
@@ -80,6 +233,8 @@ method: :delete %></li>
 					<div class="picture4"></div>
 				</div>
 				</div> 
+			
+
 
 
 			<br>
@@ -87,4 +242,4 @@ method: :delete %></li>
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->

@@ -1,0 +1,83 @@
+<%= form_for(['admin', @comentario]) do |f| %>
+			
+	<%= f.label :descripcion %>
+	<br>
+	<%= f.text_area :descripcion %>
+
+
+	<%= f.hidden_field :user_id, value: current_user.id %> 
+	<br>
+	<%= f.label :tipo_comentario %>	
+	<br>
+	<%= f.select :type_coment, Coment.type_coments.keys.to_a, {prompt: '-Seleccionar-'} %> 
+	  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  <%= f.submit %>
+
+	<% end %>
+
+
+
+<br>
+<br>
+
+<table class ="table table-stripper table-hover">
+
+	<thead>
+		<tr>
+		<th> Comentarios: </th>
+		
+	<th> Tipo de comentario: </th>
+
+		</tr>
+	</thead>
+	<tbody>
+
+		<% @comentarios.each do |c| %>
+		<tr>
+		<td> <%= c.descripcion %></td> 
+		<td> <%= c.type_coment %></td> 
+		</tr>
+		<% end %>
+
+	</tbody>
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	 <!--<%# if notice.present? %>
+<%= notice %>
+<%#end %>
+
+<table>
+	<thead>
+		<tr>
+		<th> Comentarios: </th>
+
+		</tr>
+	</thead>
+	<tbody>
+
+		<tr>
+		<td> <%= @comentario.descripcion %></td> 
+		</tr>
+
+	</tbody>
+
+</table>-->

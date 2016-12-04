@@ -1,0 +1,38 @@
+<%= link_to "[ Cerrar Sesión ]", destroy_user_session_path, method: :delete %>
+
+<h1>Coments#index</h1>
+
+<%= link_to "Nuevo comentario", new_admin_coment_path %>
+
+<% if  @comentarios.blank? %>
+<p> No hay elementos en la base de datos</p>
+<% else %>
+<table class="table table-striped table-hover">
+	<thead>
+		<tr>
+			<th> Id </th>
+			<th> Descripcion </th>
+			<th> Tipo </th>
+			
+		</tr>
+	</thead>
+	<tbody>
+		<% @comentarios.each do |e| %>
+			<tr>
+				<td><%= e.id %></td>
+				<td><%= e.descripcion %> </td>
+				<td><%= e.type_coment %> </td>
+
+				<td><%= link_to "Mostrar", admin_coment_path(e), :class => 'btn btn-info' %></td>
+
+				<td><%= link_to "Editar", edit_admin_coment_path(e), :class => 'btn btn-info' %></td>
+
+				<td><%= link_to "Eliminar", admin_coment_path(e), :class => 'btn btn-info', method: :delete, data: {confirm: "Eliminar elemento?"} %></td>
+				
+				<td>  </td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<% end %>

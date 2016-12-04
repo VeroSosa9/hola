@@ -1,3 +1,6 @@
+
+module Admin 
+
 class StudentsController < ApplicationController
 
 	layout 'admininterface'
@@ -17,7 +20,7 @@ class StudentsController < ApplicationController
   def update 
   	@estudiante = Student.find (params[:id])
   	if @estudiante.update student_params
-  		redirect_to @estudiante,notice:"Actualizado"
+  		redirect_to ['admin', @estudiante], notice:"Actualizado"
   	else 
   		render :edit
   	end
@@ -26,7 +29,7 @@ class StudentsController < ApplicationController
   def destroy 
   	@estudiante= Student.find(params[:id])
   	@estudiante.destroy
-  	redirect_to students_path, notice: "Estudiante eliminado"
+  	redirect_to admin_students_path, notice: "Usuario eliminado"
   end
 
   def show
@@ -40,7 +43,7 @@ class StudentsController < ApplicationController
   def create
   	@estudiante=Student.new  student_params
   	if @estudiante.save 
-  	redirect_to @estudiante, notice:"Estudiante creado"
+  	redirect_to ['admin', @estudiante], notice:"Usuario creado"
   else 
   	render :new
   end 
@@ -50,4 +53,5 @@ class StudentsController < ApplicationController
   	def student_params
   		params.require(:student).permit(:nombre, :apellido_paterno, :apellido_materno, :fecha_nacimiento, :telefono)
   	end
+end
 end

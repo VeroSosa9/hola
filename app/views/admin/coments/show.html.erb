@@ -1,0 +1,23 @@
+<% if notice.present? %>
+<%= notice %>
+<%end %>
+
+
+<table>
+	<thead>
+		<tr>
+		<th> Comentarios: </th>
+		<th> Tipo de comentario: </th>
+
+		</tr>
+	</thead>
+	<tbody>
+
+		<tr>
+		<td> <%= @comentario.descripcion %></td> 
+		<td> <%= @comentario.type_coment %></td> 
+		</tr>
+
+	</tbody>
+
+</table>

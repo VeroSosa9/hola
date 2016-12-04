@@ -4,7 +4,8 @@
 
 <h1>Students#index</h1>
 
-<%= link_to "Nuevo estudiante", new_student_path %>
+<%= link_to "Nuevo usuario", 
+new_admin_student_path %>
 
 <% if  @estudiantes.blank? %>
 <p> No hay elementos en la base de datos</p>
@@ -14,8 +15,8 @@
 		<tr>
 			<th> Id </th>
 			<th> Nombre </th>
-			<th> Fecha Nac </th>
-			<th> Telefono </th>
+			<th> Ocupacion </th>
+			<th> Edad</th>
 			<th> Opciones </th>
 		</tr>
 	</thead>
@@ -26,10 +27,10 @@
 				<td><%= "#{e.nombre} #{e.apellido_paterno} #{e.apellido_materno}" %></td>
 				<td><%= e.fecha_nacimiento %> </td>
 				<td><%= e.telefono %> </td>
-				<td><%= link_to "[Mostrar]", student_path(e) %></td>
-				<td><%= link_to "[Editar]", edit_student_path(e) %></td>
+				<td><%= link_to "[Mostrar]", admin_student_path(e) %></td>
+				<td><%= link_to "[Editar]", edit_admin_student_path(e) %></td>
 
-				<td><%= link_to "[Eliminar]", student_path(e), method: :delete, data: {confirm: "Eliminar elemento?"} %></td>
+				<td><%= link_to "[Eliminar]", admin_student_path(e), method: :delete, data: {confirm: "Eliminar elemento?"} %></td>
 				
 				<td>  </td>
 		</tr>

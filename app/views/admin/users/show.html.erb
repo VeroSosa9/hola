@@ -1,0 +1,26 @@
+
+<h1>Mostrar Usuarios</h1>
+<% if notice.present? %>
+<%= notice %>
+<%end %>
+<table>
+	<thead>
+		<tr>
+		<th>Nombre		</th>
+
+		<th>Email		</th>
+
+		<th>Tipo de Usuario		</th>
+		
+		
+		</tr>
+	</thead>
+	<tbody>
+	<tr>
+	<td> <%= @user.nombre %> </td>
+		<td> <%= @user.email %> </td>
+		
+		</tr>
+	</tbody>
+
+</table>
