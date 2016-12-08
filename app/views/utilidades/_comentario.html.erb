@@ -1,16 +1,23 @@
 <%= form_for(['admin', @comentario]) do |f| %>
 			
+	
+<% if current_user %>
 	<%= f.label :descripcion %>
 	<br>
 	<%= f.text_area :descripcion %>
 
-
+ 
+   
 	<%= f.hidden_field :user_id, value: current_user.id %> 
 	<br>
 	<%= f.label :tipo_comentario %>	
 	<br>
 	<%= f.select :type_coment, Coment.type_coments.keys.to_a, {prompt: '-Seleccionar-'} %> 
 	  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  <%= f.submit %>
+
+	<% end %>
+
+	
 
 	<% end %>
 
