@@ -16,9 +16,9 @@
 //= require turbolinks
 
 
-//$(function(){
+$(document).on('turbolinks:load',function(){
 	$('.dropdown-toggle').dropdown()
-//})
+})
 
 
 
